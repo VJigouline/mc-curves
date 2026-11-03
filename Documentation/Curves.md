@@ -101,7 +101,7 @@ A circle of radius `r` rolling outside a fixed circle of radius `R`. `d = r` giv
 
 A circle of radius `r` rolling inside a fixed circle of radius `R`. `R = 4r` with `d = r` gives an astroid.
 
-Roulettes have cusps when `d = r`. Their tangent and curvature follow the rules in the [reference](ICurve.md#evaluation) there.
+Roulettes have cusps when `d = r`. The [reference](ICurve.md#evaluation) describes how tangent and curvature behave at a cusp.
 
 ## Compound and custom curves
 

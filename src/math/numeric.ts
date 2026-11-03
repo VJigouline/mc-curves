@@ -28,8 +28,11 @@ export function integrate(f: (x: number) => number, a: number, b: number, tolera
     const mid = (lo + hi) / 2;
     const left = gauss8(f, lo, mid);
     const right = gauss8(f, mid, hi);
-    if (depth <= 0 || Math.abs(left + right - whole) <= tol) {
-      return left + right;
+    const sum = left + right;
+    // Below this fraction of the sum, the error estimate is only noise from rounding or from
+    // numeric derivatives: refining further would never satisfy an absolute tolerance on a large model.
+    if (depth <= 0 || Math.abs(sum - whole) <= Math.max(tol, 1e-12 * Math.abs(sum))) {
+      return sum;
     }
     return refine(lo, mid, left, tol / 2, depth - 1) + refine(mid, hi, right, tol / 2, depth - 1);
   };

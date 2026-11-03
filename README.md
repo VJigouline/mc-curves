@@ -12,7 +12,7 @@ CAD curves in TypeScript. Lines, conics, splines, NURBS, spirals and roulettes a
 The package isn't published to npm yet. Install it from a local clone:
 
 ```sh
-git clone <repository-url> MeerCADCurves
+git clone https://github.com/VJigouline/MeerCADCurves.git
 cd MeerCADCurves
 npm ci
 ```
@@ -89,7 +89,7 @@ Operations that can't keep a curve's class return one of these general forms: `T
 | `npm run typecheck` | Type-check the sources and tests |
 | `npm run build` | Compile to `dist` |
 
-The core of the test suite is `tests/contract.test.ts`, which checks every curve in `tests/catalog.ts` against the whole interface. Add a new curve to the catalogue and it is held to the same contract.
+The core of the test suite is `tests/contract.test.ts`, which checks every curve in `tests/catalog.ts` against the whole interface, and `tests/scale.test.ts` repeats key checks on very small and very large models. Add a new curve to the catalogue and it is held to the same contract.
 
 ## License
 
