@@ -1,4 +1,4 @@
-# MeerCADCurves
+# mc-curves
 
 CAD curves in TypeScript. Lines, conics, splines, NURBS, spirals and roulettes all implement one `ICurve` interface, so the same code can evaluate, measure, tessellate, intersect, trim, transform and save any of them.
 
@@ -12,15 +12,15 @@ CAD curves in TypeScript. Lines, conics, splines, NURBS, spirals and roulettes a
 The package isn't published to npm yet. Install it from a local clone:
 
 ```sh
-git clone https://github.com/VJigouline/MeerCADCurves.git
-cd MeerCADCurves
+git clone https://github.com/VJigouline/mc-curves.git
+cd mc-curves
 npm ci
 ```
 
 Then, from your project:
 
 ```sh
-npm install ../MeerCADCurves
+npm install ../mc-curves
 ```
 
 Node.js 22 or later is required.
@@ -28,7 +28,7 @@ Node.js 22 or later is required.
 ## Quick example
 
 ```ts
-import { BSplineCurve, CircularArc, Line, Transform3, Vector3, curveFromJSON } from 'meercad-curves';
+import { BSplineCurve, CircularArc, Line, Transform3, Vector3, curveFromJSON } from 'mc-curves';
 
 // Every curve shares the ICurve interface.
 const circle = CircularArc.circle(new Vector3(0, 0), 2);

@@ -13,7 +13,7 @@
 **Planar curves live in a `Frame3`,** a local coordinate system that places them anywhere in space:
 
 ```ts
-import { CircularArc, Frame3, Vector3 } from 'meercad-curves';
+import { CircularArc, Frame3, Vector3 } from 'mc-curves';
 
 const frame = Frame3.fromNormal(new Vector3(1, 2, 3), new Vector3(0, 1, 1));
 const arc = new CircularArc(frame, 5, 0, Math.PI / 2);
@@ -25,7 +25,7 @@ const arc = new CircularArc(frame, 5, 0, Math.PI / 2);
 import {
   BezierCurve, BSplineCurve, CatmullRomSpline, CircularArc, Clothoid, CompositeCurve,
   CubicSpline, EllipticalArc, Frame3, Helix, Line, NurbsCurve, ParametricCurve, Polyline, Vector3,
-} from 'meercad-curves';
+} from 'mc-curves';
 
 const v = (x: number, y: number, z = 0) => new Vector3(x, y, z);
 
@@ -132,7 +132,7 @@ A `ParametricCurve` can't be saved, because it holds a function. Convert it with
 For a one-off, use `ParametricCurve`. For a reusable class, extend `CurveBase` and implement two members; every other `ICurve` method then works numerically:
 
 ```ts
-import { CurveBase, Vector3, type CurveDomain, type CurveJSON } from 'meercad-curves';
+import { CurveBase, Vector3, type CurveDomain, type CurveJSON } from 'mc-curves';
 
 class Sine extends CurveBase {
   readonly type = 'Sine';

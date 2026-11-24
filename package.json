@@ -1,5 +1,5 @@
 {
-  "name": "meercad-curves",
+  "name": "mc-curves",
   "version": "1.0.0",
   "description": "CAD curve library: lines, conics, splines, NURBS, spirals and more behind one ICurve interface.",
   "keywords": [
@@ -49,6 +49,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VJigouline/MeerCADCurves.git"
+    "url": "git+https://github.com/VJigouline/mc-curves.git"
   }
 }
